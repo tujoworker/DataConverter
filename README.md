@@ -23,7 +23,6 @@ mkdir -p target && rm -rf target/* && mvn package
 /Library/Tomcat/bin/startup.sh
 ```
 3. And visit http://localhost:8080/DataConverterWebApp/
-```
 
 ## Author
 Tobias Høegh, tobias@tujo.no, *2017*
