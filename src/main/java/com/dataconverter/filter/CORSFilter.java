@@ -1,5 +1,5 @@
 /**
- * A custom origin filter
+ * A custom origin filter, to let all origins access this api
  *
  * @author Tobias Høegh <tobias@tujo.no>
  */
@@ -21,7 +21,7 @@ public class CORSFilter implements Filter {
 
             //to make sure origin http://localhost:3000 can get data, even if the this server runs at :8080
         	HttpServletResponse httpResponse = (HttpServletResponse) response;
-	        httpResponse.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
+	        httpResponse.setHeader("Access-Control-Allow-Origin", "*");
 	        httpResponse.setHeader("Access-Control-Allow-Methods", "GET");
         	httpResponse.setHeader("Access-Control-Allow-Headers", "X-Auth-Token, Content-Type");
         	httpResponse.setHeader("Access-Control-Allow-Credentials", "false");
